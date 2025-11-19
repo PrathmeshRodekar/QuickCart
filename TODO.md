@@ -1,0 +1,1 @@
+- [x] Uncomment <SignedIn> in the desktop navigation <ul> in components/Navbar.jsx
