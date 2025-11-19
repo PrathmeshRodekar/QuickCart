@@ -11,9 +11,9 @@ export const syncUserCreation = inngest.createFunction(
     id: "sync-user-from-clerk",
   },
   { event: "clerk/user.created" },
-  async ({ Event }) => {
+  async ({ event }) => {
     const { id, first_name, last_name, email_addresses, image_url } =
-      Event.data;
+      event.data;
     const userData = {
       _id: id,
       email: email_addresses[0].email_address,
